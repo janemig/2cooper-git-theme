@@ -1,0 +1,521 @@
+@charset "UTF-8";
+#wrapmap7 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 977px;
+	width: 1024px;
+	margin-top: -384px;
+	margin-left: -512px;
+	z-index: 1;
+	display: block;
+	
+}
+#wrap7-content {
+	position: relative;
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #120c05;
+	top: 40px;
+	-moz-box-shadow: 0 0px 42px #695b7e;
+	-webkit-box-shadow: 0 0 42px #695b7e;
+	box-shadow: 0 0 42px #695b7e;
+}
+.vert-legend {
+	width: 200px;
+	position: relative;
+	background-color: #130C0A;
+	-moz-box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.50);
+	-o-box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.50);
+	box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.50);
+	padding-top: 35px;
+	padding-right: 14px;
+	padding-bottom: 35px;
+	padding-left: 21px;
+	float: left;
+	height: 700px;
+	background-image: url(../images/left-list-top-gradient.png);
+	background-repeat: repeat-x;
+}
+.bottom-gradient {
+	background-image: url(../images/vert-legend-bottom-gradient.png);
+	background-repeat: repeat-x;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 22px;
+	width: 235px;
+	z-index: 23;
+}
+.categories ul{
+	list-style-type: none;
+	display: block;
+	position: relative;
+	padding-bottom: 14px;
+}
+.categories li{
+	margin: 0px;
+	padding: 0px;
+}
+.categories ul a {
+	text-decoration: none;
+	display: block;
+	opacity: 0.4;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 14px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #654627;
+	margin-bottom: 6px;
+	padding-bottom: 3px;
+	margin-left: 28px;
+}
+.categories ul a:hover, li#restaurants a.current, li#shopping a.current, li#entertainment a.current, li#places a.current {
+	opacity: 1.0;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #654627;
+	margin-bottom: 6px;
+}
+li#restaurants a{
+	color: #fc8302;
+}
+li#shopping a{
+	color: #B180B7;
+}
+li#entertainment a {
+	color: #4AACB7;
+}
+li#places a {
+	color: #CF0E00;
+}
+
+/* MAP */			/* MAP */ 			/* MAP */				/* MAP */
+
+#map_canvas2 {
+	position: relative;
+	-moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.60);
+	-webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.60);
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.60);
+	opacity: 0.9;
+	width: 789px;
+	height: 768px;
+	float: left;
+	background-image: url(../images/map2.jpg);
+	background-repeat: no-repeat;
+	display: block;
+}
+.panes-map {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 768px;
+	width: 789px;
+}
+.left-list {
+	display: block;
+	position: absolute;
+	left: -210px;
+	top: 170px;
+	height: 600px;
+	width: 235px;
+	z-index: 21;
+}
+
+.left-list .map-pics {
+	position: relative;
+	width: 180px;
+	margin-right: 0px;
+	margin-left: 7px;
+	margin-bottom: 0px;
+	padding: 0px;
+	display: block;
+	height: 135px;
+	overflow: hidden;
+	margin-top: 7px;
+}
+.left-list h3 {
+	font-family: 'futura-pt', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 14px;
+	padding-left: 14px;
+	margin-top: 14px;
+	margin-bottom: 7px;
+}
+.left-list h3.resthead {
+	color: #fc8302;
+}
+.left-list h3.shophead {
+	color: #B180B7;
+}
+.left-list h3.entertainhead {
+	color: #4AACB7;
+}
+.left-list h3.placeshead {
+	color: #fd1200;
+}
+
+ol.vert-list {
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
+	padding-left: 15px;
+}
+ol.vert-list li {
+	font-family: 'futura-pt', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+	text-decoration: none;
+	height: 17px;
+}
+ol.vert-list li.rest{
+	color: #fc8302;
+}
+ol.vert-list li.shop {
+	color: #AA7BB0;
+	height: 20px;
+}
+ol.vert-list li.entertain {
+	color: #4AACB7;
+	height: 21px;
+}
+ol.vert-list li.places {
+	color: #fd1200;
+	height: 23px;
+}
+
+/* RESTAURANTS */				/* RESTAURANTS */				/* RESTAURANTS */				/* RESTAURANTS */	
+
+#restaurants-plots ul {
+	list-style-type: none;
+}
+#restaurants-plots li a, #shopping-plots li a, #entertainment-plots li a, #places-plots li a {
+	position: absolute;
+	z-index: 150;
+	height: 19px;
+	width: 19px;
+	background-repeat: no-repeat;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #FFF;
+	display: block;
+	font-size: 9px;
+	text-indent: 5px;
+	text-decoration: none;
+	left: 415px;
+	top: 103px;
+	padding-top: 1px;
+	bottom: 174024338px;
+}
+#restaurants-plots li a {
+	background-image:url(../images/brown-circle-sprite.png);
+}
+#shopping-plots li a {
+	background-image:url(../images/purple-circle-sprite.png);
+}
+#entertainment-plots li a {
+	background-image:url(../images/aqua-circle-sprite.png)
+}
+#places-plots li a {
+	background-image:url(../images/red-circle-sprite.png);
+}
+#restaurants-plots li.double-digit a, #shopping-plots li.double-digit a, #entertainment-plots li.double-digit a, #places-plots li.double-digit a {
+	text-indent: 1px;
+}
+
+#restaurants-plots #acme a {
+	left: 229px;
+	top: 342px;
+}
+#restaurants-plots #aroma a {
+	left: 302px;
+	top: 346px;
+}
+#restaurants-plots #bondst a {
+	left: 205px;
+	top: 374px;
+}
+#restaurants-plots #bbar a {
+	left: 320px;
+	top: 358px;
+}
+#restaurants-plots #dbgb a {
+	left: 295px;
+	top: 508px;
+}
+#restaurants-plots #fivepoints a {
+	left: 261px;
+	top: 366px;
+}
+#restaurants-plots #forcella a {
+	left: 311px;
+	top: 432px;
+}
+#restaurants-plots #gemma a {
+	left: 315px;
+	top: 417px;
+}
+#restaurants-plots #gyu-kaku a {
+	left: 350px;
+	top: 298px;
+}
+#restaurants-plots #hecho a {
+	left: 325px;
+	top: 382px;
+}
+#restaurants-plots #ilbuco a {
+	left: 275px;
+	top: 422px;
+}
+#restaurants-plots #ilbucow a {
+	left: 292px;
+	top: 386px;
+}
+#restaurants-plots #katz a {
+	left: 516px;
+	top: 620px;
+}
+#restaurants-plots #madamgeneva a {
+	left: 280px;
+	top: 458px;
+}
+#restaurants-plots #mcsorleys a {
+	left: 410px;
+	top: 273px;
+}
+#restaurants-plots #mile-end a {
+	left: 292px;
+	top: 431px;
+}
+#restaurants-plots #nohostar a {
+	left: 204px;
+	top: 427px;
+}
+#restaurants-plots #peels a {
+	left: 306px;
+	top: 451px;
+}
+#restaurants-plots #pulinos a {
+	left: 291px;
+	top: 528px;
+}
+#restaurants-plots #phebes a {
+	left: 336px;
+	top: 367px;
+}
+#restaurants-plots #saxon a {
+	left: 301px;
+	top: 466px;
+}
+#restaurants-plots #smile a {
+	left: 253px;
+	top: 409px;
+}
+#restaurants-plots #wren a {
+	left: 319px;
+	top: 403px;
+}
+
+#restaurants-plots li a:hover {
+	background-position: -19px 0px;
+}
+
+/* SHOPPING */				/* SHOPPING */				/* SHOPPING */	
+
+#shopping-plots ul {
+	list-style-type: none;
+}
+#shopping-plots #fourth a {
+	left: 360px;
+	top: 377px;
+}
+#shopping-plots #astor a {
+	left: 276px;
+	top: 297px;
+}
+#shopping-plots #billy a {
+	left: 292px;
+	top: 435px;
+}
+#shopping-plots #blue a {
+	left: 305px;
+	top: 487px;
+}
+#shopping-plots #blush a {
+	left: 394px;
+	top: 351px;
+}
+#shopping-plots #bond9 a {
+	left: 184px;
+	top: 365px;
+}
+#shopping-plots #bondchoc a {
+	left: 378px;
+	top: 388px;
+}
+#shopping-plots #daves a {
+	left: 339px;
+	top: 407px;
+}
+#shopping-plots #eva a {
+	left: 273px;
+	top: 423px;
+}
+#shopping-plots #johnd a {
+	left: 326px;
+	top: 451px;
+}
+#shopping-plots #johnv a {
+	left: 306px;
+	top: 469px;
+}
+#shopping-plots #kiehls a {
+	left: 500px;
+	top: 20px;
+}
+#shopping-plots #oak a {
+	left: 241px;
+	top: 405px;
+}
+#shopping-plots #patricia a {
+	left: 298px;
+	top: 509px;
+}
+#shopping-plots #rogan a {
+	left: 312px;
+	top: 426px;
+}
+#shopping-plots #trader a {
+	left: 468px;
+	top: 0px;
+}
+#shopping-plots #united a {
+	left: 225px;
+	top: 394px;
+}
+#shopping-plots #whole a {
+	left: 294px;
+	top: 531px;
+}
+
+/* ENTERTAINMENT */				/* ENTERTAINMENT */		 	/* ENTERTAINMENT */	
+
+#entertainment-plots ul {
+	list-style-type: none;
+}
+
+#entertainment-plots #angelika a {
+	left: 96px;
+	top: 446px;
+}
+#entertainment-plots #anthology a {
+	left: 376px;
+	top: 478px;
+}
+#entertainment-plots #blueman a {
+	left: 321px;
+	top: 226px;
+}
+#entertainment-plots #ballroom a {
+	left: 461px;
+	top: 751px;
+}
+#entertainment-plots #poetry a {
+	left: 304px;
+	top: 486px;
+}
+#entertainment-plots #lamama a {
+	left: 394px;
+	top: 396px;
+}
+#entertainment-plots #landmark a {
+	left: 399px;
+	top: 572px;
+}
+#entertainment-plots #newmuseum a {
+	left: 259px;
+	top: 621px;
+}
+#entertainment-plots #joespub a {
+	left: 309px;
+	top: 243px;
+}
+#entertainment-plots #theater a {
+	left: 624px;
+	top: 284px;
+}
+#entertainment-plots #webster a {
+	left: 417px;
+	top: 105px;
+}
+
+/* PLACES OF INTEREST */				/* PLACES OF INTEREST */
+
+#places-plots ul {
+	list-style-type: none;
+}
+
+#places-plots #astorpl a {
+	left: 323px;
+	top: 209px;
+}
+#places-plots #bhotel a {
+	left: 315px;
+	top: 415px;
+}
+#places-plots #cshotel a {
+	left: 351px;
+	top: 290px;
+}
+#places-plots #cunion a {
+	left: 373px;
+	top: 257px;
+}
+#places-plots #lhouse a {
+	left: 332px;
+	top: 362px;
+}
+#places-plots #lizc a {
+	left: 312px;
+	top: 540px;
+}
+#places-plots #merchants a {
+	left: 282px;
+	top: 336px;
+}
+#places-plots #stmarks a {
+	left: 532px;
+	top: 303px;
+}
+#places-plots #vvoice a {
+	left: 346px;
+	top: 308px;
+}
+#places-plots #washsq a {
+	left: 133px;
+	top: 166px;
+}
+table#placeslegend {
+	float: right;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	width: 963px;
+}
+
+#restaurants-plots li a:hover, #shopping-plots li a:hover, #entertainment-plots li a:hover, #places-plots li a:hover {
+	background-position: -19px 0;
+}
